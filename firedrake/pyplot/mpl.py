@@ -750,7 +750,7 @@ def plot(function, *args, num_sample_points=10, complex_component="real", **kwar
     result = []
     for ii, line in enumerate([function, *args]):
         if isinstance(line, MeshGeometry):
-            raise TypeError("Expected Function, not Mesh; see firedrake.triplot")
+            raise TypeError("Expected Function, not Mesh; see firedrake.pyplot.mpl.triplot")
 
         if extract_unique_domain(line).geometric_dimension > 1:
             raise ValueError("Expected 1D Function; for plotting higher-dimensional fields, "
